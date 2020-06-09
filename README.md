@@ -33,7 +33,7 @@ run bash script to install mpi dependencies
 launch ipython notebook
 
 ## Results 
-![](images/integral_time.jpg)
+<img align="left" width="100" height="100" src="images/integral_time.jpg">
 
 ## Used software and hardware
 Tests are performed on (todo: add specification)
