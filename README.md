@@ -32,6 +32,9 @@ clone
 run bash script to install mpi dependencies  
 launch ipython notebook
 
+## Results 
+![](images/integral_time.jpg)
+
 ## Used software and hardware
 Tests are performed on (todo: add specification)
 
