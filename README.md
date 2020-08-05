@@ -1,6 +1,6 @@
 # MPI-OpenMP-examples
 ## Overview
-C++ and FORTRAN MPI examples with **time**, **speedup**, **cost** and **efficiency** analysis for different numbers of processes involved.
+C++ and FORTRAN MPI and OpenMP examples with **time**, **speedup**, **cost** and **efficiency** analysis for different numbers of processes involved.
 
 ## Details
 There are 3 examples, each consists of several different approaches for same problem.
@@ -14,7 +14,7 @@ Calculate defenite integral over 1 variable, using methods of rectangles. There 
 
 #### Example 2
 Calculate integral over 5 variables. The next 2 approaches are used and compared:
-- methods of rectangles
+- rectangles method
 - Monte Carlo method
 
 #### Example 3
@@ -39,7 +39,7 @@ launch ipython notebook
 ## Used software and hardware
 Tests are performed on machine with following specifications:  
 **Processor**: 8 cores Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz, cache size 16 MB  
-**RAM**:   8 GB
+**RAM**: 8 GB
 
 ## Author
 Viacheslav Zhenylenko
