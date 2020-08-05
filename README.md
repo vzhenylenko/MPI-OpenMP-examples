@@ -3,7 +3,7 @@
 C++ and FORTRAN MPI examples with time, speedup, cost and efficiency analysis for different numbers of processes involved.
 
 ## Details
-There is 3 examples, each consists of several files.
+There are 3 examples, each consists of several different approaches.
 
 #### Example 1
 Calculate defenite integral over 1 variable, using methods of rectangles. There are 4 different implementations:  
