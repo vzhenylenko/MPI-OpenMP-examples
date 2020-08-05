@@ -38,7 +38,7 @@ After that results are plotted in Python with matplotlib and seaborn and compare
 
 ## Used software and hardware
 Tests are performed on machine with following specifications:  
-**OS**: Linux xxxxxxxxxx #1 SMP Sat Apr 28 15:31:43 EEST 2018 x86_64 x86_64 x86_64 GNU/Linux  
+**OS**: Linux info.hidden #1 SMP Sat Apr 28 15:31:43 EEST 2018 x86_64 x86_64 x86_64 GNU/Linux  
 **Processor**: 8 cores Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz, cache size 16 MB  
 **RAM**: 8 GB
 
