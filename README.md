@@ -33,13 +33,13 @@ run bash script to install mpi dependencies
 launch ipython notebook
 
 ## Results 
-<img src="images/integral_time.png" width="530"/> <img src="images/integral_speedup.png" width="530"/> 
-<img src="images/integral_efficiency.png" width="530"/> <img src="images/integral_cost.png" width="530"/> 
+<img src="images/integral_time.png" width="510"/> <img src="images/integral_speedup.png" width="510"/> 
+<img src="images/integral_efficiency.png" width="510"/> <img src="images/integral_cost.png" width="510"/> 
 
 ## Used software and hardware
 Tests are performed on machine with following specifications:  
 **Processor**: 8 cores Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz, cache size 16 MB  
-**RAM**:       8 GB
+**RAM**:     8 GB
 
 ## Author
 Viacheslav Zhenylenko
