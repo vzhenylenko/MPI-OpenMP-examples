@@ -18,7 +18,7 @@ Calculate integral over 5 variables. The next 2 approaches are used and compared
 - Monte Carlo method
 
 #### Example 3
-OpenMP in C++ and FORTRAN77 is used in this example to perform 2 tasks:
+OpenMP in C++ and FORTRAN77 is used to perform 2 tasks:
 - _Pi_ calculation
 - 2 random rectangular matrices multiplication
 
@@ -27,10 +27,10 @@ Each of examples above is analysed for time of execution, speedup, cost and effi
 After that results are plotted in Python with matplotlib and seaborn and compared to "ideal" linear speedup.
 
 ## Usage
-It is assumed that you have C++ and FORTRAN compilers as well as Python and IPython with required libraries.
-clone  
-run bash script to install mpi dependencies  
-launch ipython notebook
+1. It is assumed that you have C++ and FORTRAN compilers.  
+2. Install mpi dependencies: 
+```bash install_dependencies.sh``` 
+3. Compile and run files on different numbers of processors with flag ```-np```.
 
 ## Results 
 <img src="images/integral_time.png" width="400"/> <img src="images/integral_speedup.png" width="400"/> 
