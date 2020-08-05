@@ -1,9 +1,9 @@
 # MPI-OpenMP-examples
 ## Overview
-C++ and FORTRAN MPI examples with time, speedup, cost and efficiency analysis for different numbers of processes involved.
+C++ and FORTRAN MPI examples with **time**, **speedup**, **cost** and **efficiency** analysis for different numbers of processes involved.
 
 ## Details
-There are 3 examples, each consists of several different approaches.
+There are 3 examples, each consists of several different approaches for same problem.
 
 #### Example 1
 Calculate defenite integral over 1 variable, using methods of rectangles. There are 4 different implementations:  
@@ -18,12 +18,12 @@ Calculate integral over 5 variables. The next 2 approaches are used and compared
 - Monte Carlo method
 
 #### Example 3
-OpenMP is used in this example to perform 2 tasks:
+OpenMP in C++ and FORTRAN77 is used in this example to perform 2 tasks:
 - _Pi_ calculation
 - 2 random rectangular matrices multiplication
 
-#### Analysis
-Each of examples above is analysed for time of execution, speedup, cost and efficiency with number of processes in 1..8.
+## Performance analysis
+Each of examples above is analysed for time of execution, speedup, cost and efficiency for number of processes in interval [1..8] .
 After that results are plotted in Python with matplotlib and seaborn and compared to "ideal" linear speedup.
 
 ## Usage
@@ -33,10 +33,14 @@ run bash script to install mpi dependencies
 launch ipython notebook
 
 ## Results 
-<img src="images/integral_time.png" width="425"/> <img src="images/integral_speedup.png" width="425"/> 
-<img src="images/integral_efficiency.png" width="425"/> <img src="images/integral_cost.png" width="425"/> 
+<img src="images/integral_time.png" width="500"/> <img src="images/integral_speedup.png" width="500"/> 
+<img src="images/integral_efficiency.png" width="500"/> <img src="images/integral_cost.png" width="500"/> 
+
 ## Used software and hardware
-Tests are performed on (todo: add specification)
+Tests are performed on machine with following specifications:
+**Processor**: 8 cores Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz, cache size 16 MB
+**RAM**: 8 GB
+
 
 ## Author
 Viacheslav Zhenylenko
