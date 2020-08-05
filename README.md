@@ -39,7 +39,7 @@ launch ipython notebook
 ## Used software and hardware
 Tests are performed on machine with following specifications:  
 **Processor**: 8 cores Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz, cache size 16 MB  
-**RAM**: 8 GB
+**RAM**:  8 GB
 
 ## Author
 Viacheslav Zhenylenko
