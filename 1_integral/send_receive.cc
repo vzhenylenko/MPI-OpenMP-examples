@@ -8,7 +8,7 @@
 const double A = 0.;
 const double B = 1.;
 
-double func(double x) {return (x*x*x+x)/(x*x*x*x+1.);}
+double func(double x) {return (x * x * x + x) / (x * x * x * x + 1.);}
 
 int main(int argc, char** argv) {
   int size, rank;
@@ -23,13 +23,13 @@ int main(int argc, char** argv) {
   time1 = MPI_Wtime();
 
   N /= size;
-  Al = A+(B-A)*rank/size;
-  Bl = Al+(B-A)/size;
+  Al = A + (B - A) * rank / size;
+  Bl = Al + (B - A) / size;
 
   Sum = 0;
   Yl = func(Al);
-  for (long long i = 0; i < N; ++i){
-    X = Al+(Bl-Al)*i/N;
+  for (long long i = 0; i < N; ++i) {
+    X = Al + (Bl - Al) * i / N;
     Yr = func(X);
     Sum = Sum + Yr + Yl;
     Yl = Yr;
@@ -38,17 +38,15 @@ int main(int argc, char** argv) {
   if (rank == 0) {
     timeT = MPI_Wtime() - time1;
     GSum = Sum;
-    for (int i = 1; i < size; ++i){
+    for (int i = 1; i < size; ++i) {
       MPI_Recv(&ISum, 1, MPI_DOUBLE_PRECISION, i, 0, MPI_COMM_WORLD, &Status);
       MPI_Recv(&timeI, 1, MPI_DOUBLE_PRECISION, i, 0, MPI_COMM_WORLD, &Status);
       GSum = GSum + ISum;
-      //std::cout << timeT << std::endl;
       timeT = timeT + timeI;
     }
-
     time2 = MPI_Wtime();
-    GSum = GSum/(N*size)/2*(B-A);
-    std::cout << "Result = " << GSum << " Error = " << (TRUEVAL-GSum) << std::endl <<
+    GSum = GSum / (N * size) / 2 * (B - A);
+    std::cout << "Result = " << GSum << " Error = " << (TRUEVAL - GSum) << std::endl <<
     "Time = " << time2 - time1 << std::endl;
   } else {
     timeL = MPI_Wtime() - time1;
