@@ -33,7 +33,7 @@ run bash script to install mpi dependencies
 launch ipython notebook
 
 ## Results 
-![alt-text-1](images/integral_time.png "title-1") ![alt-text-2](images/integral_speedup.png "title-2")
+<img src="images/integral_time.png" width="425"/> <img src="images/integral_time.png" width="425"/> 
 <img align="left" width="500" height="500" src="images/integral_time.png">
 <img align="left" width="500" height="500" src="images/integral_speedup.png">
 <img align="left" width="500" height="500" src="images/integral_efficiency.png">
