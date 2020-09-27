@@ -36,6 +36,8 @@ After that results are plotted in Python with matplotlib and seaborn and compare
 <img src="images/integral_time.png" width="400"/> <img src="images/integral_speedup.png" width="400"/> 
 <img src="images/integral_efficiency.png" width="400"/> <img src="images/integral_cost.png" width="400"/> 
 
+As we see, that initial metrics increases are linear, but with more cores, communication overhead results in sublinearity.
+
 ## Used software and hardware
 Tests are performed on machine with following specifications:  
 **OS**: Linux info.hidden #1 SMP Sat Apr 28 15:31:43 EEST 2018 x86_64 x86_64 x86_64 GNU/Linux  
