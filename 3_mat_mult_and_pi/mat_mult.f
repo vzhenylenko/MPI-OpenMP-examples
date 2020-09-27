@@ -32,26 +32,26 @@ C       Parameter (nThrd=8)
          allocate ( db(s,s) )
          allocate ( dc(s,s) )
          
-         do i=1, s
-         do j=1, s
-         da(i, j)=i*j
-         db(i, j)=i*j
+         do i = 1, s
+         do j = 1, s
+         da(i, j) = i * j
+         db(i, j) = i * j
          end do
          end do
 
-         t1=omp_get_wtime()
+         t1 = omp_get_wtime()
 !$omp parallel do shared(da, db, dc) private(i, j, k) num_threads(nThrd)
          do j=1, s
          do i=1, s
          dc(i, j) = 0.0
-         do k=1, s
-         dc(i, j)=dc(i, j)+da(i, k)*db(k, j)
+         do k = 1, s
+         dc(i, j) = dc(i, j) + da(i, k) * db(k, j)
          end do
          end do
          end do
         
-         t2=omp_get_wtime()
-         print *, "Time =", t2-t1
+         t2 = omp_get_wtime()
+         print *, "Time =", t2 - t1
          
          IF (s < 6) THEN
             do i = 1, s

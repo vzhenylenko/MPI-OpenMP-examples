@@ -44,8 +44,8 @@ double MC_Integrate(int N, double* xmin, double* xmax, int seed)
     }
 
     return result;
+}
 
-}  
 int main(int argc, char *argv[]){
 
     long long N = atoi(argv[1]);
@@ -54,17 +54,12 @@ int main(int argc, char *argv[]){
 
     double True_value = 22.13039559;
 
-
-
     MPI_Init(NULL, NULL);
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     MPI_Comm_size(MPI_COMM_WORLD, &size);
 
-
-
     double MC_start = MPI_Wtime();
     double MC_local = MC_Integrate(N / size, xmin, xmax, rank);
-
 
     MPI_Reduce(&MC_local, &MC_mean, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
 
@@ -87,5 +82,4 @@ int main(int argc, char *argv[]){
 
     MPI_Finalize();
     return 0;
-
 }

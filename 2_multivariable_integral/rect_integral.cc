@@ -79,11 +79,9 @@ int main(int argc, char** argv) {
         MPI_Reduce(&Sum, &GSum, 1, MPI_DOUBLE_PRECISION, MPI_SUM, 0, MPI_COMM_WORLD);
 
         if (rank == 0) {
-//                             std::cout << "Time = " << MPI_Wtime() - time_start << std::endl;
                             std::cout << "True Integral  = " << True_value << std::endl;
                             std::cout << "Rec. calculated = " << GSum << std::endl;
-                            std::cout << "Error =  " << GSum - True_value << " Time = " << MPI_Wtime() - time_start << std::endl;
-;
+                            std::cout << "Error =  " << GSum - True_value << " Time = " << MPI_Wtime() - time_start << std::endl;;
                         }
 
         MPI_Finalize();

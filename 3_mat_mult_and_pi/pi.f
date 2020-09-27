@@ -17,8 +17,8 @@
 
          READ(argv1, *) nThrd
          READ(argv2, *) n
-C       Parameter (n=10000000)
-C       Parameter (nThrd=8)
+C       Parameter (n = 10000000)
+C       Parameter (nThrd = 8)
          maxThrd = OMP_GET_MAX_THREADS()
          procs = OMP_GET_NUM_PROCS()
 
@@ -27,15 +27,15 @@ C       Parameter (nThrd=8)
          time1 = omp_get_wtime() 
 !$omp parallel do private(x) num_threads(nThrd)
 !$omp& reduction(+:sum)
-         do i=1,n
-         x = w*(i-0.5d0)
-         f = 4.d0/(1.d0 + x*x)
+         do i = 1,n
+         x = w * (i - 0.5d0)
+         f = 4.d0 / (1.d0 + x * x)
          sum = sum + f
          end do
 
-         pi = w*sum
+         pi = w * sum
          time2 = omp_get_wtime()
-         Write (6,*) 'Value = ', pi
-         Write (6,*) 'Error = ', pi-truePI
-         Write (6,*) 'Time = ', time2-time1
+         Write (6, *) 'Value = ', pi
+         Write (6, *) 'Error = ', pi - truePI
+         Write (6, *) 'Time = ', time2 - time1
          end
